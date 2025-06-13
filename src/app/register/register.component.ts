@@ -1,32 +1,38 @@
 import { Component } from '@angular/core';
-import { User } from '../models/User';
+import { Router } from '@angular/router';
 import { UserServiceService } from '../service/user-service.service';
+import { User } from '../models/User';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-register',
-  standalone: true,
-  imports: [FormsModule, CommonModule],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'] 
+  styleUrls: ['./register.component.css'],
+  standalone: true,
+  imports: [FormsModule, CommonModule]
 })
 export class RegisterComponent {
   user: User = new User();
-  showPassword: boolean = false;
-  message: string = '';
+  message = '';
+  showPassword = false;
+  successMessage: string = '';
+errorMessage: string = '';
 
-  constructor(private userService: UserServiceService) {}
+  constructor(private userService: UserServiceService, private router: Router) {}
 
-  register() {
-    this.userService.register(this.user).subscribe({
-      next: (response) => {
-        this.message = response.message || 'تم التسجيل بنجاح!';
-        this.user = new User(); // reset form
-      },
-      error: (error) => {
-        this.message = error.error.message || 'فشل في التسجيل.';
-      }
-    });
-  }
-}
+ register() {
+  this.userService.register(this.user).subscribe({
+    next: (res) => {
+      this.successMessage = res.message || 'Registered successfully';
+      this.errorMessage = '';
+      setTimeout(() => {
+        this.router.navigate(['/login']);
+      }, 4000);
+    },
+    error: (err) => {
+      this.errorMessage = err.error.message || 'Registration failed.';
+      this.successMessage = '';
+    }
+  });
+}}

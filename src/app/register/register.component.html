@@ -1,3 +1,11 @@
+<div class="alert success" *ngIf="successMessage">
+   {{ successMessage }}
+</div>
+
+<div class="alert error" *ngIf="errorMessage">
+   {{ errorMessage }}
+</div>
+
 <div class="signup-container"> 
   <div class="signup-left">
     <h2>SIGN UP</h2>
@@ -50,3 +58,7 @@
     </form>
   </div>
 </div>
+
+
+
+

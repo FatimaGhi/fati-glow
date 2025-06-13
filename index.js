@@ -6,6 +6,7 @@ const port = 3000;
 
 app.use(cors());
 app.use(express.json());
+const users = [];
 
 app.get("/api/products", (req, res) => {
   let products = [
@@ -368,6 +369,28 @@ app.get("/api/products", (req, res) => {
 ]; res.send(products)});
 
 app.post('/register', (req, res) => {
+  const { fullName, email, password, phone, address } = req.body;
+
+  if (!fullName || !email || !password || !phone || !address) {
+    return res.status(400).json({ message: 'All fields are required' });
+  }
+
+  const existingUser = users.find(u => u.email === email);
+  if (existingUser) {
+    return res.status(409).json({ message: 'Email already registered' });
+  }
+
+  const newUser = {
+    id: Date.now(),
+    fullName,
+    email,
+    password,
+    phone,
+    address
+  };
+
+  users.push(newUser);
+  res.status(201).json({ message: 'Registered successfully' });
 });
 
 
