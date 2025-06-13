@@ -6,10 +6,10 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavComponent, RouterModule,CommonModule],
+  imports: [RouterOutlet, NavComponent, RouterModule, CommonModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'tp_end';
+  title = 'fati glow';
 }

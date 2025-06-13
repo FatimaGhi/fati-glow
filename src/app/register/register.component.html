@@ -1,0 +1,52 @@
+<div class="signup-container"> 
+  <div class="signup-left">
+    <h2>SIGN UP</h2>
+    <p>Discover your beauty! Join us today and unlock exclusive offers .</p>
+  </div>
+  <div class="signup-right">
+    <div class="tabs">
+      <span class="active-tab">sign up</span>
+      <span class="inactive-tab">login</span>
+    </div>
+
+    <form (ngSubmit)="register()" #registerForm="ngForm" class="signup-form">
+      <input type="text" [(ngModel)]="user.fullName" name="fullName" placeholder="name" required #fullName="ngModel" [class.invalid]="fullName.invalid && fullName.touched" />
+      <div class="error" *ngIf="fullName.invalid && fullName.touched">
+        Full name is required.
+      </div>
+
+      <input type="text" [(ngModel)]="user.address" name="address" placeholder="address" required #address="ngModel" [class.invalid]="address.invalid && address.touched" />
+      <div class="error" *ngIf="address.invalid && address.touched">
+        Address is required.
+      </div>
+
+      <input type="tel" [(ngModel)]="user.phone" name="phone" placeholder="phone number" required  #phone="ngModel" [class.invalid]="phone.invalid && phone.touched" />
+      <div class="error" *ngIf="phone.invalid && phone.touched">
+        Please enter a valid phone number.
+      </div>
+
+      <input type="email" [(ngModel)]="user.email" name="email" placeholder="e-mail" required email #email="ngModel" [class.invalid]="email.invalid && email.touched" />
+      <div class="error" *ngIf="email.invalid && email.touched">
+        Please enter a valid email address.
+      </div>
+
+      <div class="password-wrapper">
+        <input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="user.password" name="password" placeholder="password" required minlength="6" #password="ngModel" [class.invalid]="password.invalid && password.touched" />
+        <span class="toggle-eye" (click)="showPassword = !showPassword">
+          <img src="/assets/icons/iconmonstr-eye-1.svg" *ngIf="!showPassword" alt="Show password" />
+          <img src="/assets/icons/iconmonstr-eye-off-thin.svg" *ngIf="showPassword" alt="Hide password" />
+        </span>
+      </div>
+      <div class="error" *ngIf="password.invalid && password.touched">
+        Password must be at least 8 characters.
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="agree" required />
+        <label for="agree">I accept the terms and conditions</label>
+      </div>
+
+      <button type="submit" [disabled]="registerForm.invalid">sign up</button>
+    </form>
+  </div>
+</div>

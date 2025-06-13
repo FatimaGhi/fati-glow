@@ -367,6 +367,10 @@ app.get("/api/products", (req, res) => {
   }
 ]; res.send(products)});
 
+app.post('/register', (req, res) => {
+});
+
+
 app.listen(port, () => {
   console.log(`API FATIMA  http://localhost:${port}`);
 });
