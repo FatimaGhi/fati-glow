@@ -1,31 +1,32 @@
-<!-- Tabs -->
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/catalog']" [queryParams]="{ type: 'face' }" routerLinkActive="active">Face</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/catalog']" [queryParams]="{ type: 'eyes' }" routerLinkActive="active">Eyes</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/catalog']" [queryParams]="{ type: 'lips' }" routerLinkActive="active">Lips</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" [routerLink]="['/catalog']" [queryParams]="{ type: 'all' }" routerLinkActive="active">All</a>
-  </li>
-</ul> 
+<div class="container py-4">
+  <!-- Tabs -->
+  <ul class="nav nav-tabs justify-content-center mb-4">
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/catalog']" [queryParams]="{ type: 'face' }" routerLinkActive="active">Face</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/catalog']" [queryParams]="{ type: 'eyes' }" routerLinkActive="active">Eyes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/catalog']" [queryParams]="{ type: 'lips' }" routerLinkActive="active">Lips</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/catalog']" [queryParams]="{ type: 'all' }" routerLinkActive="active">All</a>
+    </li>
+  </ul>
 
-<!-- Product Cards -->
-<div class="row mt-4">
-  <div class="col-md-4" *ngFor="let product of filterdproducts">
-    <div class="card mb-4">
-      <div class="card-body">
-        <h5 class="card-title">{{ product.name }}</h5>
-        <p class="card-text">{{ product.description }}</p>
-        <p class="fw-bold">{{ product.price }} MAD</p>
+  <!-- Product Cards -->
+  <div class="row justify-content-center">
+    <div class="col-md-4 mb-4" *ngFor="let product of filterdproducts">
+      <div class="card shadow-sm border-0 h-100 text-center">
+        <img [src]="product.urlImage" class="card-img-top" alt="{{ product.name }}" style="height: 240px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title" style="color: #a94c65;">{{ product.name }}</h5>
+          <p class="card-text text-muted">{{ product.description }}</p>
+          <p class="fw-bold">{{ product.price }} MAD</p>
+          <button class="btn btn-sm" style="background-color: #d98e98; color: white;">Add to Cart</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
-

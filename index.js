@@ -11,311 +11,358 @@ app.get("/api/products", (req, res) => {
   let products = [
   {
     "id": 1,
-    "name": "Matte Lipstick",
+    "name": "SuperStay Matte Ink",
     "name_mark": "Maybelline",
-    "urlImage": "https://cdn.shopify.com/s/files/1/0014/3514/0183/products/1000x1000-lipstick-matte.jpg?v=1654039207",
-    "description": "Long-lasting matte lipstick for bold lips.",
+    "urlImage": "assets/product/images1.png",
+    "description": "Up to 16-hour wear matte liquid lipstick.",
     "type": "lips",
-    "price": 89,
+    "price": 99,
     "colors": [
       {
-        "name": "red",
-        "quantite": 15
+        "name": "Pioneer",
+        "quantite": 14
       },
       {
-        "name": "nude",
-        "quantite": 8
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Liquid Foundation",
-    "name_mark": "Maybelline",
-    "urlImage": "https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/americas/us/products/face-makeup/foundation/fit-me-matte-poreless-foundation-packshot.jpg",
-    "description": "Oil-free foundation with pore-blurring effect.",
-    "type": "face",
-    "price": 120,
-    "colors": [
-      {
-        "name": "light beige",
-        "quantite": 10
-      },
-      {
-        "name": "natural tan",
-        "quantite": 6
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Waterproof Mascara",
-    "name_mark": "L'Oréal",
-    "urlImage": "https://images.ctfassets.net/4f3rgqwzdznj/5Vyyuvst4RSzQvbcVp79ta/9bbce6d5de4ad573f7783e9e7b4c6319/mascara.png",
-    "description": "Volumizing waterproof mascara for bold lashes.",
-    "type": "eyes",
-    "price": 75,
-    "colors": [
-      {
-        "name": "black",
+        "name": "Lover",
         "quantite": 12
       }
     ]
   },
   {
-    "id": 4,
-    "name": "Cream Blush",
-    "name_mark": "Rare Beauty",
-    "urlImage": "https://cdn.shopify.com/s/files/1/0577/9822/3174/products/CreamBlush_1024x1024.jpg?v=1628684354",
-    "description": "Soft blendable cream blush for a natural glow.",
+    "id": 2,
+    "name": "Fit Me Foundation",
+    "name_mark": "Maybelline",
+    "urlImage": "assets/product/images2.jpg",
+    "description": "Natural finish foundation with SPF 18.",
     "type": "face",
-    "price": 95,
+    "price": 130,
     "colors": [
       {
-        "name": "peach",
-        "quantite": 9
+        "name": "120 Classic Ivory",
+        "quantite": 10
       },
       {
-        "name": "rose",
-        "quantite": 4
+        "name": "228 Soft Tan",
+        "quantite": 8
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Voluminous Lash Paradise",
+    "name_mark": "L'Or\u00e9al",
+    "urlImage": "assets/product/images3.png",
+    "description": "Volumizing mascara for intense lashes.",
+    "type": "eyes",
+    "price": 80,
+    "colors": [
+      {
+        "name": "Blackest Black",
+        "quantite": 17
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Soft Pinch Liquid Blush",
+    "name_mark": "Rare Beauty",
+    "urlImage": "assets/product/images4.jpg",
+    "description": "Long-lasting liquid blush with natural finish.",
+    "type": "face",
+    "price": 110,
+    "colors": [
+      {
+        "name": "Joy",
+        "quantite": 11
+      },
+      {
+        "name": "Happy",
+        "quantite": 9
       }
     ]
   },
   {
     "id": 5,
-    "name": "Nude Eyeshadow Palette",
+    "name": "Nude Obsessions Eyeshadow",
     "name_mark": "Huda Beauty",
-    "urlImage": "https://cdn.shopify.com/s/files/1/0054/0634/2322/products/eyeshadow-palette.jpg?v=1679683954",
-    "description": "12-shade nude eyeshadow palette.",
+    "urlImage": "assets/product/images5.jpg",
+    "description": "Mini palette with 9 highly pigmented nude shades.",
     "type": "eyes",
-    "price": 145,
+    "price": 150,
     "colors": [
       {
-        "name": "brown",
-        "quantite": 10
+        "name": "Light",
+        "quantite": 7
       },
       {
-        "name": "gold",
+        "name": "Medium",
         "quantite": 5
       }
     ]
   },
   {
     "id": 6,
-    "name": "Liquid Eyeliner",
+    "name": "Epic Ink Liner",
     "name_mark": "NYX",
-    "urlImage": "https://m.media-amazon.com/images/I/61yyHZGp3bL._AC_UF1000,1000_QL80_.jpg",
-    "description": "Precision-tip waterproof eyeliner.",
+    "urlImage": "assets/product/images6.jpg",
+    "description": "Waterproof felt tip liquid eyeliner.",
     "type": "eyes",
-    "price": 60,
+    "price": 55,
     "colors": [
       {
-        "name": "black",
+        "name": "Black",
         "quantite": 20
       }
     ]
   },
   {
     "id": 7,
-    "name": "Highlighter Stick",
+    "name": "Match Stix Shimmer Skinstick",
     "name_mark": "Fenty Beauty",
-    "urlImage": "https://m.media-amazon.com/images/I/61Bo9P0BPuL._AC_SX679_.jpg",
-    "description": "Shimmer stick for cheek and brow highlight.",
+    "urlImage": "assets/product/images7.jpg",
+    "description": "Lightweight shimmer stick for highlighting.",
     "type": "face",
-    "price": 85,
+    "price": 125,
     "colors": [
       {
-        "name": "champagne",
-        "quantite": 7
+        "name": "Starstruck",
+        "quantite": 8
       },
       {
-        "name": "golden",
+        "name": "Confetti",
         "quantite": 6
       }
     ]
   },
   {
     "id": 8,
-    "name": "Matte Lip Gloss",
+    "name": "Butter Gloss",
     "name_mark": "NYX",
-    "urlImage": "https://cdn.shopify.com/s/files/1/0661/9630/7117/products/shine_lip_gloss_1_720x.jpg?v=1665010175",
-    "description": "Velvety matte finish lip gloss.",
+    "urlImage": "assets/product/images8.jpg",
+    "description": "Non-sticky gloss with buttery texture.",
     "type": "lips",
-    "price": 70,
+    "price": 65,
     "colors": [
       {
-        "name": "pink",
-        "quantite": 10
+        "name": "Tiramisu",
+        "quantite": 13
       },
       {
-        "name": "mauve",
-        "quantite": 3
+        "name": "Angel Food Cake",
+        "quantite": 7
       }
     ]
   },
   {
     "id": 9,
-    "name": "Compact Powder",
-    "name_mark": "Maybelline",
-    "urlImage": "https://m.media-amazon.com/images/I/61Z7Q9zPz1L._AC_UF1000,1000_QL80_.jpg",
-    "description": "Lightweight setting powder for daily use.",
+    "name": "Stay Matte Pressed Powder",
+    "name_mark": "Rimmel",
+    "urlImage": "assets/product/images9.jpg",
+    "description": "Shine-control pressed powder.",
     "type": "face",
-    "price": 110,
+    "price": 70,
     "colors": [
       {
-        "name": "natural",
-        "quantite": 11
+        "name": "Transparent",
+        "quantite": 12
       }
     ]
   },
   {
     "id": 10,
-    "name": "Lip Liner Pencil",
+    "name": "ColorStay Lip Liner",
     "name_mark": "Revlon",
-    "urlImage": "https://m.media-amazon.com/images/I/61svZTjKvcL._SL1500_.jpg",
-    "description": "Smooth, non-smudge lip liner.",
+    "urlImage": "assets/product/images10.png",
+    "description": "Longwear lip liner that defines lips precisely.",
     "type": "lips",
-    "price": 40,
+    "price": 45,
     "colors": [
       {
-        "name": "plum",
-        "quantite": 4
+        "name": "Red",
+        "quantite": 6
       },
       {
-        "name": "rosewood",
-        "quantite": 6
+        "name": "Pink",
+        "quantite": 8
       }
     ]
-
   },
   {
     "id": 11,
-    "name": "Makeup Product 11",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_11.jpg",
-    "description": "Sample description for makeup product 11.",
+    "name": "SuperStay Matte Ink V11",
+    "name_mark": "Maybelline",
+    "urlImage": "assets/product/images11.jpg",
+    "description": "Up to 16-hour wear matte liquid lipstick.",
     "type": "lips",
-    "price": 72,
+    "price": 104,
     "colors": [
-      { "name": "colorA", "quantite": 16 },
-      { "name": "colorB", "quantite": 13 }
+      {
+        "name": "Pioneer",
+        "quantite": 14
+      },
+      {
+        "name": "Lover",
+        "quantite": 12
+      }
     ]
   },
   {
     "id": 12,
-    "name": "Makeup Product 12",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_12.jpg",
-    "description": "Sample description for makeup product 12.",
+    "name": "Fit Me Foundation V12",
+    "name_mark": "Maybelline",
+    "urlImage": "assets/product/images12.jpg",
+    "description": "Natural finish foundation with SPF 18.",
     "type": "face",
-    "price": 74,
+    "price": 135,
     "colors": [
-      { "name": "colorA", "quantite": 17 },
-      { "name": "colorB", "quantite": 14 }
+      {
+        "name": "120 Classic Ivory",
+        "quantite": 10
+      },
+      {
+        "name": "228 Soft Tan",
+        "quantite": 8
+      }
     ]
   },
   {
     "id": 13,
-    "name": "Makeup Product 13",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_13.jpg",
-    "description": "Sample description for makeup product 13.",
+    "name": "Voluminous Lash Paradise V13",
+    "name_mark": "L'Or\u00e9al",
+    "urlImage": "assets/product/images13.png",
+    "description": "Volumizing mascara for intense lashes.",
     "type": "eyes",
-    "price": 76,
+    "price": 85,
     "colors": [
-      { "name": "colorA", "quantite": 18 },
-      { "name": "colorB", "quantite": 15 }
+      {
+        "name": "Blackest Black",
+        "quantite": 17
+      }
     ]
   },
   {
     "id": 14,
-    "name": "Makeup Product 14",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_14.jpg",
-    "description": "Sample description for makeup product 14.",
-    "type": "lips",
-    "price": 78,
+    "name": "Soft Pinch Liquid Blush V14",
+    "name_mark": "Rare Beauty",
+    "urlImage": "assets/product/images14.jpg",
+    "description": "Long-lasting liquid blush with natural finish.",
+    "type": "face",
+    "price": 115,
     "colors": [
-      { "name": "colorA", "quantite": 19 },
-      { "name": "colorB", "quantite": 16 }
+      {
+        "name": "Joy",
+        "quantite": 11
+      },
+      {
+        "name": "Happy",
+        "quantite": 9
+      }
     ]
   },
   {
     "id": 15,
-    "name": "Makeup Product 15",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_15.jpg",
-    "description": "Sample description for makeup product 15.",
-    "type": "face",
-    "price": 80,
+    "name": "Nude Obsessions Eyeshadow V15",
+    "name_mark": "Huda Beauty",
+    "urlImage": "assets/product/images15.jpg",
+    "description": "Mini palette with 9 highly pigmented nude shades.",
+    "type": "eyes",
+    "price": 155,
     "colors": [
-      { "name": "colorA", "quantite": 20 },
-      { "name": "colorB", "quantite": 17 }
+      {
+        "name": "Light",
+        "quantite": 7
+      },
+      {
+        "name": "Medium",
+        "quantite": 5
+      }
     ]
   },
   {
     "id": 16,
-    "name": "Makeup Product 16",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_16.jpg",
-    "description": "Sample description for makeup product 16.",
+    "name": "Epic Ink Liner V16",
+    "name_mark": "NYX",
+    "urlImage": "assets/product/images16.jpg",
+    "description": "Waterproof felt tip liquid eyeliner.",
     "type": "eyes",
-    "price": 82,
+    "price": 60,
     "colors": [
-      { "name": "colorA", "quantite": 21 },
-      { "name": "colorB", "quantite": 18 }
+      {
+        "name": "Black",
+        "quantite": 20
+      }
     ]
   },
   {
     "id": 17,
-    "name": "Makeup Product 17",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_17.jpg",
-    "description": "Sample description for makeup product 17.",
-    "type": "lips",
-    "price": 84,
+    "name": "Match Stix Shimmer Skinstick V17",
+    "name_mark": "Fenty Beauty",
+    "urlImage": "assets/product/images17.jpg",
+    "description": "Lightweight shimmer stick for highlighting.",
+    "type": "face",
+    "price": 130,
     "colors": [
-      { "name": "colorA", "quantite": 22 },
-      { "name": "colorB", "quantite": 19 }
+      {
+        "name": "Starstruck",
+        "quantite": 8
+      },
+      {
+        "name": "Confetti",
+        "quantite": 6
+      }
     ]
   },
   {
     "id": 18,
-    "name": "Makeup Product 18",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_18.jpg",
-    "description": "Sample description for makeup product 18.",
-    "type": "face",
-    "price": 86,
+    "name": "Butter Gloss V18",
+    "name_mark": "NYX",
+    "urlImage": "assets/product/images18.jpg",
+    "description": "Non-sticky gloss with buttery texture.",
+    "type": "lips",
+    "price": 70,
     "colors": [
-      { "name": "colorA", "quantite": 23 },
-      { "name": "colorB", "quantite": 20 }
+      {
+        "name": "Tiramisu",
+        "quantite": 13
+      },
+      {
+        "name": "Angel Food Cake",
+        "quantite": 7
+      }
     ]
   },
   {
     "id": 19,
-    "name": "Makeup Product 19",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_19.jpg",
-    "description": "Sample description for makeup product 19.",
-    "type": "eyes",
-    "price": 88,
+    "name": "Stay Matte Pressed Powder V19",
+    "name_mark": "Rimmel",
+    "urlImage": "assets/product/images19.jpg",
+    "description": "Shine-control pressed powder.",
+    "type": "face",
+    "price": 75,
     "colors": [
-      { "name": "colorA", "quantite": 24 },
-      { "name": "colorB", "quantite": 21 }
+      {
+        "name": "Transparent",
+        "quantite": 12
+      }
     ]
   },
   {
     "id": 20,
-    "name": "Makeup Product 20",
-    "name_mark": "Generic",
-    "urlImage": "assets/images/product_20.jpg",
-    "description": "Sample description for makeup product 20.",
+    "name": "ColorStay Lip Liner V20",
+    "name_mark": "Revlon",
+    "urlImage": "assets/product/images20.jpg",
+    "description": "Longwear lip liner that defines lips precisely.",
     "type": "lips",
-    "price": 90,
+    "price": 50,
     "colors": [
-      { "name": "colorA", "quantite": 25 },
-      { "name": "colorB", "quantite": 22 }
+      {
+        "name": "Red",
+        "quantite": 6
+      },
+      {
+        "name": "Pink",
+        "quantite": 8
+      }
     ]
   }
 ]; res.send(products)});

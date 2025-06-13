@@ -1,4 +1,58 @@
-.active {
-  font-weight: bold;
-  border-bottom: 2px solid red;
+.custom-navbar {
+  background: linear-gradient(to right, #fbeaea, #fddede);
+  border-bottom: 1px solid #e4bcbc;
 }
+
+.navbar-brand {
+  color: #783f3f;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.nav-link-custom {
+  font-weight: 500;
+  color: #7a4e4e !important;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: #b66565 !important;
+  border-bottom: 2px solid #b66565;
+}
+
+.elegant-navbar {
+  background-color: #fff4f4;
+  border-bottom: 1px solid #eec8c8;
+  z-index: 1030; /* أعلى من default */
+}
+.navbar-custom {
+  background: linear-gradient(to right, #fff0f2, #ffe9ec);
+  border-bottom: 1px solid #f5c2c7;
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  color: #aa4a65;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+  color: #e36388;
+}
+
+.nav-link-custom {
+  color: #7d4e57;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: #e36388;
+  border-bottom: 2px solid #e36388;
+}
+
