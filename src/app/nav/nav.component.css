@@ -55,4 +55,25 @@
   color: #e36388;
   border-bottom: 2px solid #e36388;
 }
+.logo-container {
+  width: 150px;
+  margin: 0 auto 5px auto;
+  text-align: center;
+}
+
+.logo-container img {
+  width: 100%;
+  max-width: 100px;
+  height: 50px;
+  animation: fadeSlide 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 

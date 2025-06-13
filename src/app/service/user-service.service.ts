@@ -13,4 +13,8 @@ export class UserServiceService {
   register(user: User): Observable<any> {
     return this.http.post(this.apiUrl, user);
   }
+
+   login(email: string, password: string): Observable<any> {
+    return this.http.post('http://localhost:3000/login', { email, password });
+  }
 }

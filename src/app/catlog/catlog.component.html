@@ -24,9 +24,23 @@
           <h5 class="card-title" style="color: #a94c65;">{{ product.name }}</h5>
           <p class="card-text text-muted">{{ product.description }}</p>
           <p class="fw-bold">{{ product.price }} MAD</p>
-          <button class="btn btn-sm" style="background-color: #d98e98; color: white;">Add to Cart</button>
+          <button class="add-to-cart-icon" (click)="viewDetails(product)">
+  <img src="/assets/icons/cart-plus.svg" alt="Add to Cart" />
+</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+<!-- Popup modal -->
+<div class="modal-backdrop" *ngIf="selectedProduct" (click)="closeDetails()"></div>
+<div class="product-modal" *ngIf="selectedProduct">
+  <h3>{{ selectedProduct.name }}</h3>
+  <img [src]="selectedProduct.urlImage" alt="{{ selectedProduct.name }}" />
+  <p><strong>{{ selectedProduct.price }} MAD</strong></p>
+  <p>{{ selectedProduct.description }}</p>
+  <button (click)="closeDetails()">Close</button>
+</div>
+

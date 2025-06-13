@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1749967721820,
+    "fullName": "mohamed",
+    "email": "admin@admin.com",
+    "password": "2001fati",
+    "phone": "33",
+    "address": "hay ",
+    "role": "buyer"
+  },
+  {
+    "id": 17499677218211,
+    "fullName": "mohamed",
+    "email": "fatimazahraeelghiouan69@gmail.com",
+    "password": "2001fati",
+    "phone": "33",
+    "address": "hay ",
+    "role": "seller"
+  },
+  {
+    "id": 1750122766979,
+    "fullName": "saida",
+    "email": "yetime4113@citdaca.com",
+    "password": "2001fati",
+    "phone": "12",
+    "address": "hay ",
+    "role": "buyer"
+  }
+]

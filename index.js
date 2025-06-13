@@ -3,10 +3,21 @@ const cors = require('cors');
 
 const app = express();
 const port = 3000;
+const fs = require('fs');
 
 app.use(cors());
 app.use(express.json());
-const users = [];
+
+
+let users = [];
+// for save in file !!!!
+const usersFile = './users.json';
+
+// Load users from file on startup
+if (fs.existsSync(usersFile)) {
+  users = JSON.parse(fs.readFileSync(usersFile, 'utf8'));
+}
+
 
 app.get("/api/products", (req, res) => {
   let products = [
@@ -386,12 +397,37 @@ app.post('/register', (req, res) => {
     email,
     password,
     phone,
-    address
+    address,
+    role: 'buyer' 
   };
 
   users.push(newUser);
+  // save in file users 
+  fs.writeFileSync(usersFile, JSON.stringify(users, null, 2));
+
   res.status(201).json({ message: 'Registered successfully' });
 });
+
+app.post('/login', (req, res) => {
+  const { email, password } = req.body;
+  const users = JSON.parse(fs.readFileSync(usersFile, 'utf-8'));
+
+  console.log('Login request:', { email, password }); 
+
+  const user = users.find(u => {
+    console.log('Comparing with:', u.email, u.password); 
+    return u.email === email && u.password === password;
+  });
+
+  if (!user) {
+    console.log(' No matching user found');
+    return res.status(401).json({ message: 'Invalid credentials' });
+  }
+
+  console.log(' User found:', user);
+  res.json({ message: 'Login successful', user });
+});
+
 
 
 app.listen(port, () => {

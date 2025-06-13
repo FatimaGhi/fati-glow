@@ -5,6 +5,7 @@ export class User {
   password: string;
   phone: string;
   address: string;
+   role?: string;
 
   constructor(data?: Partial<User>) {
     this.id = data?.id;
@@ -13,5 +14,6 @@ export class User {
     this.password = data?.password || '';
     this.phone = data?.phone || '';
     this.address = data?.address || '';
+    this.role = data?.role || 'buyer';
   }
 }

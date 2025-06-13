@@ -36,4 +36,15 @@ export class CatlogComponent implements OnInit{
      console.log("🔍 Filtered by type =", type, this.filterdproducts);
   }
 
+   selectedProduct: any = null;
+
+viewDetails(product: any) {
+  this.selectedProduct = product;
+}
+
+closeDetails() {
+  this.selectedProduct = null;
+}
+
+
 }
