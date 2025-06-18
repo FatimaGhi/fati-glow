@@ -34,13 +34,52 @@
 </div>
 
 
-<!-- Popup modal -->
-<div class="modal-backdrop" *ngIf="selectedProduct" (click)="closeDetails()"></div>
+<!-- Backdrop -->
+<div class="modal-backdrop" *ngIf="selectedProduct"></div>
+
+<!-- Modal -->
 <div class="product-modal" *ngIf="selectedProduct">
-  <h3>{{ selectedProduct.name }}</h3>
-  <img [src]="selectedProduct.urlImage" alt="{{ selectedProduct.name }}" />
-  <p><strong>{{ selectedProduct.price }} MAD</strong></p>
-  <p>{{ selectedProduct.description }}</p>
-  <button (click)="closeDetails()">Close</button>
+  <!-- Close Icon -->
+  <span class="close-btn" (click)="closeDetails()">×</span>
+
+  <div class="product-info">
+    <img [src]="selectedProduct.urlImage" [alt]="selectedProduct.name" class="product-image" />
+    <div class="details">
+      <h2>{{ selectedProduct.name }}</h2>
+      <p>{{ selectedProduct.description }}</p>
+      <p class="price">{{ selectedProduct.price }} MAD</p>
+
+      <!-- Color Options -->
+      <div class="color-options">
+        <strong>Color:</strong>
+        <div class="colors">
+          <button
+            *ngFor="let color of selectedProduct.colors"
+            [class.active]="color.name === selectedColor"
+            (click)="selectedColor = color.name">
+            {{ color.name }} ({{ color.quantite }})
+          </button>
+        </div>
+      </div>
+
+      <!-- Quantity -->
+      <div class="quantity-control">
+        <strong>Quantity:</strong>
+        <div class="qty-box">
+          <button (click)="decrement()">−</button>
+          <span>{{ selectedQuantity }}</span>
+          <button (click)="increment()">+</button>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <button class="buy-now">Buy Now</button>
+      <button class="add-cart" (click)="addToCart()">Add to Cart</button>
+
+      <!-- Success Message -->
+      <div class="success-msg" *ngIf="successMessage">{{ successMessage }}</div>
+    </div>
+  </div>
 </div>
+
 
