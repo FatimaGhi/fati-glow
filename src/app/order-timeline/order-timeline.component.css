@@ -1,0 +1,40 @@
+.order-timeline-container {
+  position: relative;
+  gap: 10px;
+}
+
+.step {
+  z-index: 1;
+}
+
+.line {
+  height: 2px;
+  background-color: #f0b6c2;
+  z-index: 0;
+  left: 0;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  font-size: 18px;
+  background-color: #fce4ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.circle.active {
+  background-color: #ec407a;
+  border-color: #c2185b;
+}
+
+.circle.inactive {
+  background-color: #f8bbd0;
+  color: #fff;
+  opacity: 0.5;
+}

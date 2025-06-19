@@ -68,12 +68,20 @@ addToCart() {
    setTimeout(() => {
     this.closeDetails();
     this.successMessage = '';  
-  }, 2500);
+  }, 1500);
+
+
+  
 // this.route.navigate(['/cart']);
 
   // this.closeDetails();
 }
-
+buyNow() {
+  console.log(' ********************** Buy now clicked');
+this.cartService.clearCart();
+  this.cartService.addToCart(this.selectedProduct, this.selectedColor, this.selectedQuantity);
+  this['router'].navigate(['/checkout']); 
+}
 
 
 }

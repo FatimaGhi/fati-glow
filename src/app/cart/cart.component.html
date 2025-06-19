@@ -42,7 +42,9 @@
   </div>
 </div>
 
-    <button class="checkout-btn">Checkout ({{ cart.length }})</button>
+    <!-- <button class="checkout-btn">Checkout ({{ cart.length }})</button> -->
+    <button class="checkout-btn" [routerLink]="['/checkout']">Checkout ({{ cart.length }})</button>
+
     <button class="clear-btn" (click)="clearCart()">Clear Cart</button>
   </div>
 </div>

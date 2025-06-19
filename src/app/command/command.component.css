@@ -1,0 +1,10 @@
+/* command.component.css */
+table {
+  font-size: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+select.form-select {
+  min-width: 140px;
+  font-size: 14px;
+}

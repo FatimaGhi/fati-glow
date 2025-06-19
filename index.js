@@ -23,6 +23,7 @@ app.get("/api/products", (req, res) => {
   let products = [
   {
     "id": 1,
+    "sellerId": 17499677218211,
     "name": "SuperStay Matte Ink",
     "name_mark": "Maybelline",
     "urlImage": "assets/product/images1.png",
@@ -42,6 +43,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 2,
+    "sellerId": 17499677218211,
     "name": "Fit Me Foundation",
     "name_mark": "Maybelline",
     "urlImage": "assets/product/images2.jpg",
@@ -61,6 +63,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 3,
+    "sellerId": 17499677218211,
     "name": "Voluminous Lash Paradise",
     "name_mark": "L'Or\u00e9al",
     "urlImage": "assets/product/images3.png",
@@ -76,6 +79,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 4,
+    "sellerId": 17499677218211,
     "name": "Soft Pinch Liquid Blush",
     "name_mark": "Rare Beauty",
     "urlImage": "assets/product/images4.jpg",
@@ -95,6 +99,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 5,
+    "sellerId": 17499677218211,
     "name": "Nude Obsessions Eyeshadow",
     "name_mark": "Huda Beauty",
     "urlImage": "assets/product/images5.jpg",
@@ -114,6 +119,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 6,
+    "sellerId": 17499677218211,
     "name": "Epic Ink Liner",
     "name_mark": "NYX",
     "urlImage": "assets/product/images6.jpg",
@@ -129,6 +135,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 7,
+    "sellerId": 17499677218211,
     "name": "Match Stix Shimmer Skinstick",
     "name_mark": "Fenty Beauty",
     "urlImage": "assets/product/images7.jpg",
@@ -148,6 +155,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 8,
+    "sellerId": 17499677218211,
     "name": "Butter Gloss",
     "name_mark": "NYX",
     "urlImage": "assets/product/images8.jpg",
@@ -167,6 +175,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 9,
+    "sellerId": 17499677218211,
     "name": "Stay Matte Pressed Powder",
     "name_mark": "Rimmel",
     "urlImage": "assets/product/images9.jpg",
@@ -182,6 +191,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 10,
+    "sellerId": 17499677218211,
     "name": "ColorStay Lip Liner",
     "name_mark": "Revlon",
     "urlImage": "assets/product/images10.png",
@@ -201,6 +211,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 11,
+    "sellerId": 17499677218211,
     "name": "SuperStay Matte Ink V11",
     "name_mark": "Maybelline",
     "urlImage": "assets/product/images11.jpg",
@@ -220,6 +231,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 12,
+    "sellerId": 17499677218211,
     "name": "Fit Me Foundation V12",
     "name_mark": "Maybelline",
     "urlImage": "assets/product/images12.jpg",
@@ -239,6 +251,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 13,
+    "sellerId": 17499677218211,
     "name": "Voluminous Lash Paradise V13",
     "name_mark": "L'Or\u00e9al",
     "urlImage": "assets/product/images13.png",
@@ -254,6 +267,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 14,
+    "sellerId": 17499677218211,
     "name": "Soft Pinch Liquid Blush V14",
     "name_mark": "Rare Beauty",
     "urlImage": "assets/product/images14.jpg",
@@ -273,6 +287,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 15,
+    "sellerId": 17499677218211,
     "name": "Nude Obsessions Eyeshadow V15",
     "name_mark": "Huda Beauty",
     "urlImage": "assets/product/images15.jpg",
@@ -307,6 +322,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 17,
+    "sellerId": 17499677218211,
     "name": "Match Stix Shimmer Skinstick V17",
     "name_mark": "Fenty Beauty",
     "urlImage": "assets/product/images17.jpg",
@@ -326,6 +342,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 18,
+    "sellerId": 17499677218211,
     "name": "Butter Gloss V18",
     "name_mark": "NYX",
     "urlImage": "assets/product/images18.jpg",
@@ -345,6 +362,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 19,
+    "sellerId": 17499677218211,
     "name": "Stay Matte Pressed Powder V19",
     "name_mark": "Rimmel",
     "urlImage": "assets/product/images19.jpg",
@@ -360,6 +378,7 @@ app.get("/api/products", (req, res) => {
   },
   {
     "id": 20,
+    "sellerId": 17499677218211,
     "name": "ColorStay Lip Liner V20",
     "name_mark": "Revlon",
     "urlImage": "assets/product/images20.jpg",

@@ -26,8 +26,9 @@ addToCart(product: any, selectedColor: string, quantity: number) {
     } else {
       cart.push({
       id: product.id,
+      sellerId: product.sellerId,
       name: product.name,
-      urlImage: product.urlImage, // ✅ ضروري
+      urlImage: product.urlImage, 
       description: product.description,
       price: product.price,
       selectedColor: selectedColor,
@@ -49,4 +50,5 @@ addToCart(product: any, selectedColor: string, quantity: number) {
   clearCart() {
     localStorage.removeItem(this.cartKey);
   }
+  
 }

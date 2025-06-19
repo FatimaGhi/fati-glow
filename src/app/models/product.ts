@@ -1,5 +1,6 @@
 export class Product {
   id!: number;
+  sellerId!: string;
   name!: string;
   name_market!: string;
   urlImage!: string;
