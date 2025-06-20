@@ -1,79 +1,74 @@
-.custom-navbar {
-  background: linear-gradient(to right, #fbeaea, #fddede);
-  border-bottom: 1px solid #e4bcbc;
-}
-
-.navbar-brand {
-  color: #783f3f;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-}
-
-.nav-link-custom {
-  font-weight: 500;
-  color: #7a4e4e !important;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.nav-link-custom:hover,
-.nav-link-custom.active {
-  color: #b66565 !important;
-  border-bottom: 2px solid #b66565;
-}
-
-.elegant-navbar {
-  background-color: #fff4f4;
-  border-bottom: 1px solid #eec8c8;
-  z-index: 1030; /* أعلى من default */
-}
+/* 🌸 Navbar base style */
 .navbar-custom {
-  background: linear-gradient(to right, #fff0f2, #ffe9ec);
-  border-bottom: 1px solid #f5c2c7;
-  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fff1f5, #ffe6eb); 
+  border-bottom: 1px solid #f7c4cd;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 5px 15px rgba(245, 179, 191, 0.1);
   z-index: 1030;
 }
 
-.navbar-brand {
-  color: #aa4a65;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
-.navbar-brand:hover {
-  color: #e36388;
-}
-
-.nav-link-custom {
-  color: #7d4e57;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-link-custom:hover,
-.nav-link-custom.active {
-  color: #e36388;
-  border-bottom: 2px solid #e36388;
-}
+/* 🌸 Logo styling */
 .logo-container {
-  width: 150px;
-  margin: 0 auto 5px auto;
+  width: 120px;
+  margin: 0 auto;
   text-align: center;
+  animation: fadeLogo 1.2s ease-out;
 }
 
 .logo-container img {
   width: 100%;
   max-width: 100px;
   height: 50px;
-  animation: fadeSlide 1.2s ease-out forwards;
-  opacity: 0;
-  transform: translateY(-30px);
+  object-fit: contain;
 }
 
-@keyframes fadeSlide {
+/* 🌸 Logo animation */
+@keyframes fadeLogo {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* 🌸 Nav links */
+.nav-link-custom {
+  font-weight: 500;
+  color: #7f4655 !important;
+  margin: 0 14px;
+  font-size: 15px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: #e45c84 !important;
+}
+
+/* 🌸 Underline animation */
+.nav-link-custom::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #e45c84;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after {
+  width: 100%;
+}
+
+/* 🌸 Toggler for mobile */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='%23884B55' class='bi bi-list' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M2.5 12.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1 0-1zm0-5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1 0-1zm0-5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1 0-1z'/%3E%3C/svg%3E");
+}

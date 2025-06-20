@@ -209,7 +209,7 @@
   transform: translateX(-50%);
   width: 90%;
   max-width: 850px;
-  background: white; /* ✅ مهم بزاف */
+  background: white; 
   padding: 20px;
   border-radius: 12px;
   z-index: 101;
@@ -222,7 +222,7 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,0.5);
-  z-index: 999; /* 🔺 أعلى من navbar */
+  z-index: 999; 
 }
 
 .product-modal {
@@ -236,7 +236,7 @@
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  z-index: 1000; /* 🔺 أعلى من كلشي */
+  z-index: 1000; 
 }
 
 

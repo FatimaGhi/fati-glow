@@ -1,6 +1,6 @@
 .login-wrapper {
   height: 100vh;
-  background: linear-gradient(to bottom right, #ffe4ec, #ffeaf1);
+  background: linear-gradient(to bottom right, rgb(247, 224, 235),white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,3 +136,26 @@ button:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+.logo-container img {
+  width: 100%;
+  max-width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; 
+  border: 4px solid #f8c3d6; 
+  box-shadow: 0 4px 12px rgba(240, 143, 170, 0.4); 
+  animation: rotateLogo 3s linear infinite, fadeSlide 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg) translateY(-30px);
+  }
+  100% {
+    transform: rotate(360deg) translateY(-30px);
+  }
+}
+
