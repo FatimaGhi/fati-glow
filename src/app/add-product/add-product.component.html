@@ -1,0 +1,40 @@
+<div class="add-product-container">
+  <h2 class="title">Add New Product</h2>
+
+  <form (ngSubmit)="addProduct()">
+    <label>Product Name:</label>
+    <input type="text" [(ngModel)]="product.name" name="name" class="form-control" required />
+
+    <label>Brand:</label>
+    <input type="text" [(ngModel)]="product.name_market" name="name_market" class="form-control" required />
+
+    <label>Image URL:</label>
+    <input type="text" [(ngModel)]="product.urlImage" name="urlImage" class="form-control" required />
+
+    <label>Description:</label>
+    <textarea [(ngModel)]="product.description" name="description" class="form-control" rows="3"></textarea>
+
+    <label>Price:</label>
+    <input type="number" [(ngModel)]="product.price" name="price" class="form-control" required />
+
+    <label>Type:</label>
+    <select [(ngModel)]="product.type" name="type" class="form-control">
+      <option value="face">Face</option>
+      <option value="eyes">Eyes</option>
+      <option value="lips">Lips</option>
+      <option value="others">Others</option>
+    </select>
+
+    <div *ngFor="let color of product.colors; let i = index" class="color-group">
+      <label>Color Name:</label>
+      <input type="text" [(ngModel)]="color.name" name="colorName{{i}}" class="form-control" required />
+
+      <label>Quantity:</label>
+      <input type="number" [(ngModel)]="color.quantite" name="colorQty{{i}}" class="form-control" required />
+    </div>
+
+    <button type="button" (click)="addColorField()" class="btn btn-secondary mt-2">+ Add Color</button>
+
+    <button type="submit" class="btn btn-primary mt-4 w-100">Add Product</button>
+  </form>
+</div>

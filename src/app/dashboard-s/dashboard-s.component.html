@@ -1,4 +1,43 @@
-<h1> bay3 abb</h1>
-<h1> bay3 abb</h1>
-<h1> bay3 abb</h1>
-<h1> bay3 abb</h1>
+<div class="container mt-4">
+  <h2>My Products</h2>
+
+  <!-- Button to toggle form -->
+<button class="btn btn-primary" [routerLink]="['/addProduct']">➕ Add Product</button>
+
+  <!-- Add Product Form -->
+  <app-add-product
+    *ngIf="showAddForm"
+    (productAdded)="handleProductAdded()"
+  ></app-add-product>
+
+  <!-- Product Table -->
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Colors</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td><img [src]="p.urlImage" alt="image" class="product-image" style="width: 60px; height: 60px;"></td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.type }}</td>
+        <td>{{ p.price }} MAD</td>
+        <td>
+          <ul class="mb-0">
+            <li *ngFor="let c of p.colors">{{ c.name }} ({{ c.quantite }})</li>
+          </ul>
+        </td>
+        <td>
+          <button class="btn btn-sm btn-warning me-2">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteProduct(p.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

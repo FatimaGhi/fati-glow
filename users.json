@@ -25,5 +25,14 @@
     "phone": "12",
     "address": "hay ",
     "role": "buyer"
+  },
+  {
+    "id": 1750390742529,
+    "fullName": "Rudyard Bush",
+    "email": "pupacisif@mailinator.com",
+    "password": "Pa$$w0rd!",
+    "phone": "+1 (801) 962-2564",
+    "address": "Aliquam rem et ad in",
+    "role": "buyer"
   }
 ]

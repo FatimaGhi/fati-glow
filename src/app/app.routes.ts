@@ -8,6 +8,7 @@ import { CommandComponent } from './command/command.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 import { LoginComponent } from './login/login.component';
 
@@ -22,5 +23,6 @@ export const routes: Routes = [
     {path: 'command', component: CommandComponent},
     {path: 'checkout', component: CheckoutComponent},
     {path: 'myOrders', component: MyOrdersComponent},
-    {path: 'orderDetails/:id', component: OrderDetailsComponent}
+    {path: 'orderDetails/:id', component: OrderDetailsComponent},
+    {path: 'addProduct', component: AddProductComponent}
 ];

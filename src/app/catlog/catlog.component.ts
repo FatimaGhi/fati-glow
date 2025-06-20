@@ -20,6 +20,7 @@ export class CatlogComponent implements OnInit{
 
   constructor(private productService: GetDataService, private route: ActivatedRoute,private cartService: CartService) { }
   ngOnInit(): void {
+    
     this.productService.getProducts().subscribe(data => { 
       this.products = data;
       console.table("*************"+this.products);

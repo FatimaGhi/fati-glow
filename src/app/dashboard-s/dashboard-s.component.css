@@ -1,0 +1,67 @@
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f8f9fa;
+  text-align: center;
+  font-weight: 600;
+}
+
+td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+img {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+button {
+  font-size: 14px;
+}
+
+button.btn-warning {
+  background-color: #ff07a4;
+  border: none;
+  color: #fff;
+}
+
+button.btn-danger {
+  background-color: #a9a5a8;
+  border: none;
+  color: #fff;
+}
+
+button.btn-primary {
+  float: right;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.product-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
