@@ -1,0 +1,13 @@
+
+{
+  "HOME": "Accueil",
+  "CATALOG": "Catalogue",
+  "CART": "Panier",
+  "MY_ORDERS": "Mes Commandes",
+  "MY_PRODUCTS": "Mes Produits",
+  "MY_COMMANDE": "Mes Commandes",
+  "ORDER_HISTORY": "Historique",
+  "LOGIN": "Connexion",
+  "REGISTER": "Créer un compte",
+  "LOGOUT": "Déconnexion"
+}
